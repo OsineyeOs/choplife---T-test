@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-headline: 'Titan One', cursive, sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --brand-red: #D62828;
+    --brand-dark-red: #6A040F;
+    --brand-yellow: #FFC700;
+    --brand-bright-yellow: #FFD000;
+    --brand-brown: #4D080F;
+    --brand-green: #43E29F;
+    --brand-orange: #F94144;
+  }
+
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, .font-headline {
+    font-family: var(--font-headline);
+  }
+}
+
+/* Custom utility classes */
+.font-titan {
+  font-family: 'Titan One', cursive, sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hide scrollbar for clean horizontal category scrolling on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Sauce drip & wave animations */
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 3s ease-in-out infinite;
+}
+

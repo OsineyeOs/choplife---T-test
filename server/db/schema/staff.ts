@@ -1,0 +1,33 @@
+import { pgTable, text, integer, timestamp, boolean, jsonb } from 'drizzle-orm/pg-core';
+import { branches, timestamps } from './organisation';
+
+export const staff = pgTable('staff', {
+  id: text('id').primaryKey(),
+  staffId: text('staff_id').unique().notNull(),
+  name: text('name').notNull(),
+  email: text('email'),
+  workEmail: text('work_email').notNull(),
+  phone: text('phone').notNull(),
+  role: text('role').notNull(),
+  branchId: text('branch_id').references(() => branches.id),
+  allowedBranchIds: jsonb('allowed_branch_ids'),
+  customPrivileges: jsonb('custom_privileges'),
+  passwordHash: text('password_hash').notNull(),
+  salt: text('salt'),
+  status: text('status').default('active').notNull(),
+  mustChangePassword: boolean('must_change_password').default(false),
+  failedLoginAttempts: integer('failed_login_attempts').default(0),
+  lockoutUntil: timestamp('lockout_until'),
+  lastLoginAt: timestamp('last_login_at'),
+  lastLoginIp: text('last_login_ip'),
+  dob: timestamp('dob'),
+  guarantorName: text('guarantor_name'),
+  guarantorPhone: text('guarantor_phone'),
+  guarantorRelationship: text('guarantor_relationship'),
+  guarantorAddress: text('guarantor_address'),
+  guarantorWorkplace: text('guarantor_workplace'),
+  pinHash: text('pin_hash'),
+  pinSalt: text('pin_salt'),
+  payrollProfile: jsonb('payroll_profile'),
+  ...timestamps,
+});

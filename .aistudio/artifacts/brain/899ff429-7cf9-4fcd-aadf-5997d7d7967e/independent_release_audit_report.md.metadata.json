@@ -1,0 +1,5 @@
+{
+  "summary":  "Independent release audit report for Choplife Republic covering static code inspection, execution of automated release and gate test suites (53/53 and 37/37 passed), Ezee Optimus, PHP POS and Chowdeck feature comparison, P0-P2 priority validation, deployment checklist, and rollback guide.",
+  "updatedAt":  "2026-10-27T17:53:17.486276214Z",
+  "userFacing":  true
+}

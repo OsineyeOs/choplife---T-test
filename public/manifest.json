@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "ChopLife Republic Benin",
+  "short_name": "ChopLife",
+  "description": "ChopLife Republic - Quick Service Restaurant, POS & Dispatch Operations in Benin City",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF7F2",
+  "theme_color": "#4D080F",
+  "icons": [
+    {
+      "src": "/pwa-icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

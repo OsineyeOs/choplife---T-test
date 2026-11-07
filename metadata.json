@@ -1,0 +1,11 @@
+{
+  "name": "Remix Remix Choplife Republic",
+  "description": "Premium multi-location online ordering, branch menu management, and digital commerce platform for Choplife Republic in Benin City, Edo State.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
